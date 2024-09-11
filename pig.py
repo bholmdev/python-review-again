@@ -16,7 +16,7 @@ def play_game():
                 print("Invalid, try again.")
 
     num_players = start()
-    max_score = 10
+    max_score = 50
     player_scores = [0 for _ in range(num_players)]
 
     def roll():
