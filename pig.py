@@ -38,6 +38,7 @@ def play_game():
         while max(player_scores) < max_score:
             for player in range(num_players):
                 print(f"\nPlayer {player + 1}'s turn!\n")
+                print(f"Your total score is: {player_scores[player]}\n")
                 current_score = 0
 
                 while True:
@@ -60,6 +61,15 @@ def play_game():
 
                 player_scores[player] += current_score
                 print("Your total score is:", player_scores[player])
+        
+        finale()
+
+    def finale():
+        max_score = max(player_scores)
+        winning_idx = player_scores.index(max_score)
+
+        print(f"Player number {winning_idx + 1} is the winner with a score of {max_score}")
+        
         play_again()
         
     game()
